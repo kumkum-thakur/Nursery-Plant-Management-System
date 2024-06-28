@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Plant Nursery</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add CSS for alignment */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .top {
+        background-color: #388e3c; /* Dark green */
+        color: white;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      .marquee {
+        background-color: #66bb6a; /* Light green */
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      .footer {
+        background-color: #388e3c; /* Dark green */
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: auto;
+      }
+
+      /* Additional styling for <p> element */
+      p {
+        font-size: 20px; /* Increased font size */
+        line-height: 1.6;
+        margin: 20px 0;
+        padding: 0 20px;
+      }
+
+      /* Style for list */
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+        font-size: 18px; /* Adjusted font size for list items */
+      }
+
+      li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #66bb6a; /* Light green */
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        color: #ffcc80; /* Light orange */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <header>
+        <h1>About Us</h1>
+        <nav>
+          <ul>
+            <li><a class="nav-link" href="first_page.html">Home</a></li>
+            <li><a class="nav-link" href="About.html">About</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+            <li><a class="nav-link" href="shop.html">Shop</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div>
+      <!-- Updated content for About Us -->
+      <p>
+        Welcome to Plant Nursery! We are passionate about bringing nature into
+        your life. Our mission is to provide high-quality plants and gardening
+        products to our customers, helping them create beautiful and sustainable
+        outdoor spaces. With years of experience and a dedicated team, we strive
+        to inspire and empower individuals to embrace the beauty of nature.
+        Explore our About and start your gardening journey with us today!
+      </p>
+      <p>Our Values:</p>
+      <ul>
+        <li>
+          Quality: We ensure that every plant we offer is of the highest
+          quality, sourced from trusted growers.
+        </li>
+        <li>
+          Sustainability: We are committed to sustainable practices, including
+          eco-friendly packaging and reducing our carbon footprint.
+        </li>
+        <li>
+          Customer Service: Our team is dedicated to providing exceptional
+          customer service, from plant selection to aftercare support.
+        </li>
+        <li>
+          Innovation: We continuously innovate to bring you new and exciting
+          plant varieties and gardening solutions.
+        </li>
+        <li>
+          Community: We believe in building a strong community of plant
+          enthusiasts, sharing knowledge and experiences.
+        </li>
+      </ul>
+    </div>
+
+    <footer class="footer"></footer>
+  </body>
+</html>

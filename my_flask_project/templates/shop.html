@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Plant Nursery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add CSS to increase font size */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .top {
+            background-color: #388e3c; /* Dark green */
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo-container img {
+            width: 100px;
+            height: 100px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        .marquee {
+            background-color: #66bb6a; /* Light green */
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #388e3c; /* Dark green */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Additional styling for <p> element */
+        p {
+            font-size: 20px; /* Increased font size */
+            line-height: 1.6;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        /* Style for list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 18px; /* Adjusted font size for list items */
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #66bb6a; /* Light green */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 20px; /* Adjust font size as needed */
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        button {
+            font-size: 16px; /* Adjust button font size */
+        }
+
+        /* Additional styling for search input */
+        .search-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Additional styling for cart */
+        .cart-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+        }
+
+        /* Adjusted styles for cart button */
+        button.cart-btn {
+            font-size: 16px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Quantity input style */
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+        .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #ffcc80; /* Light orange */
+}
+    </style>
+</head>
+<body>
+<div class="top">
+    <header>
+        <div class="logo-container">
+            <h1 font-size="100"><center>SHOP</center></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a class="nav-link" href="#" class="dropbtn"> &#9776; </a>
+                    <div class="dropdown-content"></div>
+                </li>
+                <li><a class="nav-link" href="first_page.html">Home</a></li>
+                <li><a class="nav-link" href="About.html">About</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li><a class="nav-link" href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div>
+    <marquee class="marquee">
+        Explore the beauty of nature with
+        <span class="bold">Plant Nursery</span> – where green meets serenity!<br />
+    </marquee>
+</div>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search plants..." />
+    <button onclick="search()">Search</button>
+</div>
+
+<div class="welcome-container">
+    <p class="intro-text">Your oasis of greenery.</p>
+</div>
+
+<div class="shop-container">
+    <table>
+        <thead>
+        <tr>
+            <th>Plant</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+            <th>Available</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Rose</td>
+            <td>$10</td>
+            <td><input type="number" class="quantity-input" id="quantityRose" value="5" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Lily')">Add to Cart</button></td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Lily</td>
+            <td>$8</td>
+            <td><input type="number" class="quantity-input" id="quantityLily" value="3" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Lily')">Add to Cart</button></td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Tulip</td>
+            <td>$6</td>
+            <td><input type="number" class="quantity-input" id="quantityTulip" value="2" min="1"></td>
+            <td><button class="cart-btn" >Not Available</button></td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Orchid</td>
+            <td>$12</td>
+            <td><input type="number" class="quantity-input" id="quantityOrchid" value="1" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Orchid')">Add to Cart</button></td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Sunflower</td>
+            <td>$7</td>
+            <td><input type="number" class="quantity-input" id="quantitySunflower" value="4" min="1"></td>
+            <td><button class="cart-btn" >Not Available</button></td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Daisy</td>
+            <td>$5</td>
+            <td><input type="number" class="quantity-input" id="quantityDaisy" value="3" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Daisy')">Add to Cart</button></td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Lavender</td>
+            <td>$9</td>
+            <td><input type="number" class="quantity-input" id="quantityLavender" value="2" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Lavender')">Add to Cart</button></td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Magnolia</td>
+            <td>$11</td>
+            <td><input type="number" class="quantity-input" id="quantityMagnolia" value="1" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Magnolia')">Add to Cart</button></td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Hydrangea</td>
+            <td>$8</td>
+            <td><input type="number" class="quantity-input" id="quantityHydrangea" value="3" min="1"></td>
+            <td><button class="cart-btn" >Not Available</button></td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Peony</td>
+            <td>$10</td>
+            <td><input type="number" class="quantity-input" id="quantityPeony" value="2" min="1"></td>
+            <td><button class="cart-btn" onclick="addToCart('Peony')">Add to Cart</button></td>
+            
+            <td>Yes</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="info-icon"><a href="#">&#9432;</a></div>
+        <div class="text">Your ultimate source for all things green.</div>
+    </div>
+</footer>
+
+<!-- Cart overlay -->
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-content">
+        <h2>Cart Items</h2>
+        <div id="cartItems"></div>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="closeCart()">Close</button>
+    </div>
+</div>
+
+<script>
+    // JavaScript function to handle search
+    function search() {
+        // Your search functionality code
+    }
+
+    // Function to add plant to cart
+    function addToCart(plantName) {
+        var cartItems = document.getElementById("cartItems");
+        var quantity = document.getElementById("quantity" + plantName).value;
+        var newItem = document.createElement("div");
+        newItem.classList.add("cart-item");
+        newItem.textContent = plantName + " x " + quantity;
+        cartItems.appendChild(newItem);
+        document.getElementById("cartOverlay").style.display = "flex";
+    }
+
+    // Function to show cart overlay
+    function showCart() {
+        document.getElementById("cartOverlay").style.display = "flex";
+    }
+
+    // Function to close cart overlay
+    function closeCart() {
+        document.getElementById("cartOverlay").style.display = "none";
+    }
+
+    // Function to clear cart items (checkout)
+    function checkout() {
+        var cartItems = document.getElementById("cartItems");
+        cartItems.innerHTML = ""; // Clearing the cart
+        closeCart(); // Close the cart overlay after checkout
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Plant Nursery</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background-color: #aed581;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+      .logo-container img {
+        height: 70px;
+        width: auto;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+      }
+      nav a {
+        color: BLACK;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .marquee {
+        background-color: white;
+        color: #388e3c;
+        padding: 0.5rem 0;
+        font-size: 1.2rem;
+      }
+      .welcome-container {
+        text-align: center;
+        padding: 2rem 1rem;
+        background-color: #fff;
+      }
+      .welcome-container h1 {
+        font-size: 2.5rem;
+        color: #4CAF50;
+      }
+      .intro-text {
+        font-size: 1.2rem;
+        color: #666;
+      }
+      .nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #ffcc80; /* Light orange */
+}
+      .btn-start {
+        display: inline-block;
+        margin: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .contact-section {
+        padding: 2rem;
+        background-color: #f9f9f9;
+      }
+      .contact-section h2 {
+        text-align: center;
+        color: #4CAF50;
+        font-size: 2rem;
+      }
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      input, textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 0.5rem 0 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .btn-submit {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      .li {
+        color:black"
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <h1 font-size="100"><center>Contact</center></h1>
+      </div>
+      <nav>
+        <ul >
+          <li><a class="nav-link" href="first_page.html">Home</a></li>
+                <li><a class="nav-link" href="About.html">About</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li><a class="nav-link" href="shop.html">Shop</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div>
+      <marquee class="marquee">
+        Explore the beauty of nature with
+        <span class="bold">Plant Nursery</span> – where green meets serenity!
+      </marquee>
+    </div>
+
+    
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="address">address:</label>
+        <textarea id="address" name="address" rows="5" required></textarea>
+        <button type="submit" class="btn-submit">Send</button>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="text">Your ultimate source for all things green.</div>
+      </div>
+    </footer>
+  </body>
+</html>

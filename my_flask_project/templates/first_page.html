@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Nursery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+
+  <Style>
+    /* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Specify Comic Sans MS font */
+
+  background-color: #f0f8ff; /* Light blue */
+}
+
+/* Header styles */
+.top header {
+  background-color: #aed581; /* Light green */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 100px;
+}
+
+.top nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.top nav ul li {
+  margin-right: 20px;
+}
+
+.top nav ul li a {
+  color: #333; /* Dark grey */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top nav ul li a:hover {
+  color: #388e3c; /* Dark green */
+}
+
+/* Marquee styles */
+.marquee {
+  color: #388e3c; /* Dark green */
+  padding: 10px;
+}
+
+/* Welcome container styles */
+.welcome-container {
+  background-color: #c5e1a5; /* Soft green */
+  padding: 50px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.pexels.com/photos/1423601/pexels-photo-1423601.jpeg?cs=srgb&dl=pexels-jplenio-1423601.jpg&fm=jpg");
+}
+
+.welcome-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  color: #333; /* Dark grey */
+  font-size: 1.5rem;
+}
+
+.btn-start {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0288d1; /* Dark blue */
+  color: #fff; /* White */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-start:hover {
+  background-color: #66bb6a; /* Light green */
+}
+
+/* About section styles */
+#About-section {
+  background-color: #e0f7fa; /* Soft blue */
+  padding: 50px;
+  text-align: center;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #ffcc80; /* Light orange */
+}
+
+#About-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #aed581; /* Light green */
+  color: #333; /* Dark grey */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon {
+  margin-right: 10px;
+}
+
+.info-icon a {
+  color: #333; /* Dark grey */
+  text-decoration: none;
+}
+
+  </Style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <body>
+    <div class="top">
+      <header>
+        <div class="logo-container">
+           
+        </div>
+        <nav>
+          <ul>
+            <li class="dropdown">
+              <a href="#" class="dropbtn"> &#9776; </a>
+              <div class="dropdown-content"></div>
+            </li>
+            <li>
+              <li><a class="nav-link" href="first_page.html">Home</a></li>
+                <li><a class="nav-link" href="About.html">About</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li><a class="nav-link" href="shop.html">Shop</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div>
+      <marquee class="marquee">
+        Explore the beauty of nature with
+        <span class="bold">Plant Nursery</span> – where green meets serenity!<br />
+      </marquee>
+    </div>
+
+    <div class="welcome-container">
+      <br /><br /><br /><br /><br />
+      <h1>Welcome to <span class="nursery">Plant</span> Nursery!</h1>
+      <p class="intro-text">Your oasis of greenery.</p>
+      <br />
+      <!-- Use anchor tag for redirection -->
+      <a href="shop.html" class="btn-start">Explore Shop</a>
+      <br />
+      <br />
+      <a href="contact.html" class="btn-start">Contact Us</a
+      ><br /><br /><br /><br /><br /><br /><br />
+    </div>
+
+    <!-- About Section -->
+    <div id="About-section">
+      <ul id="About-list">
+        <!-- About items will be dynamically generated here -->
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="info-icon"><a href="#">&#9432;</a></div>
+        <div class="text">Your ultimate source for all things green.</div>
+      </div>
+    </footer>
+  </body>
+</html>

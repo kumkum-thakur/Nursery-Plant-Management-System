@@ -1,0 +1,125 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Specify Comic Sans MS font */
+
+  background-color: #f0f8ff; /* Light blue */
+}
+
+/* Header styles */
+.top header {
+  background-color: #aed581; /* Light green */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 100px;
+}
+
+.top nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.top nav ul li {
+  margin-right: 20px;
+}
+
+.top nav ul li a {
+  color: #333; /* Dark grey */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top nav ul li a:hover {
+  color: #388e3c; /* Dark green */
+}
+
+/* Marquee styles */
+.marquee {
+  color: #388e3c; /* Dark green */
+  padding: 10px;
+}
+
+/* Welcome container styles */
+.welcome-container {
+  background-color: #c5e1a5; /* Soft green */
+  padding: 50px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://media.istockphoto.com/id/1415786581/photo/green-lawn-of-grass-leaves-in-the-park-detail-blurred-background.jpg?s=612x612&w=0&k=20&c=8jwWAR0FiFfOqrPM8EsEojPbZCxHKEEOr5iz5Z3tmxg=");
+}
+
+.welcome-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  color: #333; /* Dark grey */
+  font-size: 1.5rem;
+}
+
+.btn-start {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0288d1; /* Dark blue */
+  color: #fff; /* White */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-start:hover {
+  background-color: #66bb6a; /* Light green */
+}
+
+/* About section styles */
+#About-section {
+  background-color: #e0f7fa; /* Soft blue */
+  padding: 50px;
+  text-align: center;
+}
+
+#About-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #aed581; /* Light green */
+  color: #333; /* Dark grey */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon {
+  margin-right: 10px;
+}
+
+.info-icon a {
+  color: #333; /* Dark grey */
+  text-decoration: none;
+}
